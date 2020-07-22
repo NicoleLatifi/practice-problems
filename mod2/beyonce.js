@@ -85,17 +85,30 @@ const beyonce = {
   ]
 };
 
-// console log all the songs
+//1. console log all the songs
 beyonce.hits.forEach(hit => {
-  console.log(hit.title);
+  console.log(hit);
 })
 
+//2. create an array with a list of all the titles of Beyonce's hit songs
+function getAllTitles() {
+  return beyonce.hits.map(hit => {
+    return hit.title;
+  });
+};
+const allTitles = getAllTitles();
 
-// create an array with a list of all the titles of Beyonce's hit songs
+console.log(allTitles);
 
+//3. create an array with a list of all of Beyonce's fierceness ratings
+function getAllRatings() {
+  return beyonce.hits.map(hit => {
+    return hit.fierceness;
+  });
+};
+const allRatings = getAllRatings();
 
-// create an array with a list of all of Beyonce's fierceness ratings
-
+console.log(allRatings);
 
 // give me a song where Beyonce is not wearing a bodysuit
 
