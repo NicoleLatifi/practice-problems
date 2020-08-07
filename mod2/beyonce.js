@@ -86,31 +86,44 @@ const beyonce = {
 };
 
 //1. console log all the songs
-beyonce.hits.forEach(hit => {
-  console.log(hit);
-})
+
+// beyonce.hits.forEach(hit => {
+//   console.log(hit);
+// })
 
 //2. create an array with a list of all the titles of Beyonce's hit songs
-function getAllTitles() {
-  return beyonce.hits.map(hit => {
-    return hit.title;
-  });
-};
-const allTitles = getAllTitles();
 
-console.log(allTitles);
+// function getAllTitles() {
+//   return beyonce.hits.map(hit => {
+//     return hit.title;
+//   });
+// };
+// const allTitles = getAllTitles();
+//
+// console.log(allTitles);
 
 //3. create an array with a list of all of Beyonce's fierceness ratings
-function getAllRatings() {
-  return beyonce.hits.map(hit => {
-    return hit.fierceness;
-  });
-};
-const allRatings = getAllRatings();
 
-console.log(allRatings);
+// function getAllRatings() {
+//   return beyonce.hits.map(hit => {
+//     return hit.fierceness;
+//   });
+// };
+// const allRatings = getAllRatings();
+//
+// console.log(allRatings);
 
 // give me a song where Beyonce is not wearing a bodysuit
+
+function getNonBodysuitSong() {
+  return beyonce.hits.find(hit => {
+    return hit.signatureLook.includes('fedora with yellow feather')
+  })
+}
+
+const nonBodysuitSong = getNonBodysuitSong();
+
+console.log(nonBodysuitSong.title)
 
 
 // give me all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
