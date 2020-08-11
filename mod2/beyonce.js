@@ -113,7 +113,7 @@ const beyonce = {
 //
 // console.log(allRatings);
 
-// give me a song where Beyonce is not wearing a bodysuit
+//4. give me a song where Beyonce is not wearing a bodysuit
 
 function getNonBodysuitSong() {
   return beyonce.hits.find(hit => {
